@@ -1,1 +1,2 @@
-当前版本：2.2.1
+# smart-agriculture
+大模型课程作业
