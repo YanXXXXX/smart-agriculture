@@ -1,0 +1,270 @@
+{
+    "title": "基本形状",
+    "icon": "shape",
+    "opened": false,
+    "items": [
+        {
+            "text": "三角",
+            "icon": "triangle",
+            "type": "svg",
+            "info": {
+                "type": "triangle",
+                "componentShow": ["组件颜色", "组件填充", "参数绑定"],
+                "action": [],
+                "dataBind": {
+                    "sn": "",
+                    "title": "",
+                    "biz": "",
+                    "stateList": []
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 200,
+                        "h": 200
+                    },
+                    "backColor": "rgba(255, 255, 255, 0)",
+                    "foreColor": "#808080ff",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)"
+                }
+            }
+        },
+        {
+            "text": "矩形",
+            "icon": "rectangle",
+            "type": "svg",
+            "info": {
+                "type": "rect",
+                "componentShow": ["组件颜色", "组件填充", "参数绑定"],
+                "action": [],
+                "dataBind": {
+                    "sn": "",
+                    "title": "",
+                    "biz": "",
+                    "stateList": []
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 100,
+                        "h": 200
+                    },
+                    "backColor": "rgba(255, 255, 255, 0)",
+                    "foreColor": "#808080ff",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)",
+                    "radius": 0
+                }
+            }
+        },
+        {
+            "text": "圆形",
+            "icon": "circular",
+            "type": "svg",
+            "info": {
+                "type": "circular",
+                "componentShow": ["组件颜色", "组件填充", "参数绑定"],
+                "action": [],
+                "dataBind": {
+                    "sn": "",
+                    "title": "",
+                    "biz": "",
+                    "stateList": []
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 200,
+                        "h": 200
+                    },
+                    "backColor": "rgba(255, 255, 255, 0)",
+                    "foreColor": "#808080ff",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)"
+                }
+            }
+        },
+        {
+            "text": "直线",
+            "icon": "line",
+            "type": "svg",
+            "info": {
+                "type": "line",
+                "componentShow": ["组件颜色", "组件填充", "参数绑定"],
+                "action": [],
+                "dataBind": {
+                    "sn": "",
+                    "title": "",
+                    "biz": "",
+                    "stateList": []
+                },
+                "style": {
+                    "position": {
+                        "x": 100,
+                        "y": 100,
+                        "w": 300,
+                        "h": 30
+                    },
+                    "backColor": "rgba(255, 255, 255, 0)",
+                    "foreColor": "#808080ff",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)",
+                    "lineWidth": 2
+                }
+            }
+        },
+        {
+            "text": "箭头线",
+            "icon": "arrow-right",
+            "type": "svg",
+            "info": {
+                "type": "line-arrow",
+                "componentShow": ["组件颜色", "组件填充", "参数绑定"],
+                "action": [],
+                "dataBind": {
+                    "sn": "",
+                    "title": "",
+                    "biz": "",
+                    "stateList": []
+                },
+                "style": {
+                    "position": {
+                        "x": 100,
+                        "y": 100,
+                        "w": 600,
+                        "h": 200
+                    },
+                    "backColor": "rgba(255, 255, 255, 0)",
+                    "foreColor": "#808080ff",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)",
+                    "lineWidth": 2,
+                    "points": [
+                        {
+                            "x": 20,
+                            "y": 10
+                        },
+                        {
+                            "x": 70,
+                            "y": 10
+                        },
+                        {
+                            "x": 120,
+                            "y": 10
+                        },
+                        {
+                            "x": 170,
+                            "y": 10
+                        },
+                        {
+                            "x": 220,
+                            "y": 10
+                        },
+                        {
+                            "x": 270,
+                            "y": 10
+                        },
+                        {
+                            "x": 320,
+                            "y": 10
+                        },
+                        {
+                            "x": 370,
+                            "y": 10
+                        },
+                        {
+                            "x": 420,
+                            "y": 10
+                        },
+                        {
+                            "x": 470,
+                            "y": 10
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "text": "曲线",
+            "icon": "curve",
+            "type": "svg",
+            "info": {
+                "type": "bizier-curve-arrow",
+                "componentShow": ["组件颜色", "组件填充", "参数绑定"],
+                "action": [],
+                "dataBind": {
+                    "stateList": []
+                },
+                "style": {
+                    "position": {
+                        "x": 100,
+                        "y": 100,
+                        "w": 300,
+                        "h": 80
+                    },
+                    "backColor": "rgba(255, 255, 255, 0)",
+                    "foreColor": "#808080ff",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)",
+                    "lineWidth": 2,
+                    "points": [
+                        {
+                            "x": 20,
+                            "y": 20
+                        },
+                        {
+                            "x": 20,
+                            "y": 100
+                        },
+                        {
+                            "x": 200,
+                            "y": 100
+                        },
+                        {
+                            "x": 200,
+                            "y": 20
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "text": "竖线",
+            "icon": "vertical-line",
+            "type": "svg",
+            "info": {
+                "type": "line",
+                "direction": "vertical",
+                "componentShow": ["组件颜色", "组件填充", "参数绑定"],
+                "action": [],
+                "dataBind": {
+                    "stateList": []
+                },
+                "style": {
+                    "position": {
+                        "x": 100,
+                        "y": 100,
+                        "w": 30,
+                        "h": 200
+                    },
+                    "backColor": "rgba(255, 255, 255, 0)",
+                    "foreColor": "#808080ff",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)",
+                    "lineWidth": 2
+                }
+            }
+        }
+    ]
+}

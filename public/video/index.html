@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+	<link rel="stylesheet" href="./iconfont.css">
+	<link rel="stylesheet" href="https://unpkg.com/vant@2.12/lib/index.css"/>
+	<style>
+        * {
+            -webkit-touch-callout:none;
+            -webkit-user-select:none;
+            -khtml-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+            }
+		[v-cloak] {
+			display: none;
+		}
+		#player .container {
+			height: 250px;
+			width: 100%;
+			background: rgba(13, 14, 27, 0.7);
+		}
+		#player .tabs{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			height: 50px;
+			line-height: 50px;
+			border-bottom: 10px solid #eee;
+		}
+		#player .tabs .iconfont{
+			flex: 1;
+			text-align: center;
+		}
+		#player .tabs .iconfont.active{
+			color: #69BB73;
+		}
+		#player .title{
+			height: 50px;
+			line-height: 50px;
+			padding:0 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		#player .title .channel{
+			display: flex;
+			align-items: center;
+			font-size: 12px;
+		}
+		#player .title .date{
+			display: flex;
+			border: 2px solid #eee;
+			width: 50%;
+			height: 25px;
+			line-height: 25px;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+		#player .title .date .time{
+			width: 80%;
+			font-size: 14px;
+			text-align: center;
+		}
+		#player .title .date .icon{
+			height: 100%;
+			width: 20%;
+			background: #69BB73;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		#player .controller .rocker{
+			margin: 15px auto;
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			position: relative;
+			box-sizing: border-box;
+			border: 8px solid #f1f7ed;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		#player .controller .rocker>div{
+			border-radius: 50%;
+			overflow: hidden;
+		}
+		#player .controller .rocker .left{
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(0,-50%);
+		}
+		#player .controller .rocker .right{
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translate(0,-50%);
+		}
+		#player .controller .rocker .up{
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%,0);
+		}
+		#player .controller .rocker .down{
+			position: absolute;
+			bottom:  0;
+			left: 50%;
+			transform: translate(-50%,0);
+		}
+		#player .controller .rocker .circle{
+			position: relative;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			border: 1px solid #eee;
+			background-color: #eee;
+		}
+		#player .controller .zoom{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 50px;
+			width: 70%;
+			margin: 0 auto;
+			border-radius: 25px;
+			box-shadow: 0 -8px 5px #eee;
+			overflow: hidden;
+
+		}
+		#player .controller .zoom .van-button{
+			height: 100%;
+		}
+		#player .controller .zoom .text{
+			width: 100%;
+			margin: 0 5px;
+			text-align: center;
+			color: #69BB73;
+		}
+		#player .playback{
+			padding: 0 20px;
+			box-sizing: border-box;
+		}
+		#player .playback .recordItems{
+			border: 1px solid #eee;
+			padding: 10px;
+			border-radius: 8px;
+			box-sizing: border-box;
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+    <div id="player" v-cloak>
+		<div ref="container" class="container"></div>
+		<!-- <div class="tabs">
+			<div v-for="(item,index) in tabsList" :key="index" @click="changTabs(item,index)"
+			:class="['iconfont',item.icon,{active:currentName==item.name}]"></div>
+		</div> -->
+		<div class="title">
+			<div class="">
+				{{currentName}}
+			</div>
+			<div class="channel" @click="show=true" v-show="currentName=='云台控制'">
+				{{channelName}}<van-icon name="arrow-down" />
+			</div>
+		</div>
+		<div class="controller" v-show="currentName=='云台控制'">
+			<div class="rocker">
+				<div class="up" @touchstart ="handleDirection('up')" @touchend ="handleDirection('stop')">
+					<van-button plain round icon="arrow-up"></van-button>
+				</div>
+				<div class="down" @touchstart ="handleDirection('down')" @touchend ="handleDirection('stop')">
+					<van-button plain round icon="arrow-down"></van-button>
+				</div>
+				<div class="left" @touchstart ="handleDirection('left')" @touchend ="handleDirection('stop')">
+					<van-button plain round icon="arrow-left"></van-button>
+				</div>
+				<div class="right" @touchstart ="handleDirection('right')" @touchend ="handleDirection('stop')">
+					<van-button plain round icon="arrow"></van-button>
+				</div>
+				<div class="circle"></div>
+			</div>
+			<div class="zoom">
+				<van-button plain round  icon="plus" @touchstart="ptzScale(1)" @touchend.native="ptzStop"></van-button>
+				<div class="text"> 缩放 </div>
+				<van-button plain round icon="minus" @touchstart="ptzScale(2)" @touchend.native="ptzStop"></van-button>
+			</div>
+		</div>
+
+		<van-popup v-model="show" position="bottom">
+			<van-picker show-toolbar :columns="channelList" @cancel="show = false" @confirm="select"/>
+		</van-popup>
+	</div>
+	<script>
+	    (function(doc, win) {
+	      var docEl = doc.documentElement,
+	      resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	      recalc = function() {
+	        var clientWidth = docEl.clientWidth;
+	        if(!clientWidth) return;
+	      };
+	      if(!doc.addEventListener) return;
+	      win.addEventListener(resizeEvt, recalc, false);
+	      doc.addEventListener('DOMContentLoaded', recalc, false);
+	    })(document, window);
+	</script>
+
+	<script type="text/javascript" src="../js/jessibuca-pro/jessibuca-pro.js"></script>
+	<script type="text/javascript" src="./axios.js"></script>
+	<script type="text/javascript" src="./uni.webview.1.5.4.js"></script>
+	<script type="text/javascript" src="./vue.js"></script>
+	<script type="text/javascript" src="./uuidv4.min.js"></script>
+	<script src="https://unpkg.com/vant@2.12/lib/vant.min.js"></script>
+
+	<script >
+		let vue = Vue
+		document.addEventListener("UniAppJSBridgeReady", function() {
+			vue.prototype.myUni = uni
+		});
+		new vue({
+			el: '#player',
+			data: {
+				loading: false,
+				channelSipId:'',
+				serialNumber:'',
+				params:{},
+				tabsList:[
+					{
+						icon:"icon-erjiyasuojichuanganqiguzhang",
+						name:"云台控制",
+					},
+					{
+						icon:"icon-zhaoxiangji",
+					},
+				],
+				currentName:"云台控制",
+				channelName:"无通道",
+				channelList:[],
+				show:false,
+				request:null,
+			},
+			async mounted() {
+				var str = window.location.search.substr(1)
+				var params = {};
+				str.split('&').forEach((item)=>{
+				  let kv = item.split('=');
+				  params[kv[0]] = kv[1];
+				});
+				this.params = params
+				await this.createAxios(params.fetchUrl)
+				await this.getDeviceInfo(params.deviceId)
+				await this.create();
+			},
+			methods:{
+				createAxios(fetchUrl){
+					axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8'
+					this.request = axios.create({
+					  baseURL:fetchUrl,//setting.fetchUrl,
+					  timeout: 5000
+					})
+					this.request.interceptors.request.use(config => {
+					  if (this.params.token) {
+						config.headers['Authorization'] = 'Bearer ' + this.params.token // 让每个请求携带自定义token 请根据实际情况自行修改
+					  }
+					  return config
+					}, error => {
+						Promise.reject(error)
+					})
+					this.request.interceptors.response.use(res => {
+						const code = res.data.code || 200;
+						const msg = res.data.msg
+						if (code === 401) {
+							this.myUni.postMessage({
+								data: {
+									code:code
+								},
+							})
+							return Promise.reject('401 error')
+						} else if (code === 500) {
+							this.myUni.postMessage({
+								data: {
+									code:code
+								},
+							})
+							return Promise.reject(new Error(msg))
+						} else if (code === 502) {
+							this.myUni.postMessage({
+								data: {
+									code:code
+								},
+							})
+						  return Promise.reject('error')
+						} else if (code !== 200) {
+							this.myUni.postMessage({
+								data: {
+									code:code
+								},
+							})
+							return Promise.reject('error')
+						} else {
+							return res.data
+						}
+						return res.data
+					},
+					error => {
+					let { message } = error;
+						if (message == "Network Error") {
+						  message = "后端接口连接异常";
+						}
+						else if (message.includes("timeout")) {
+						  message = "系统接口请求超时";
+						}
+						else if (message.includes("Request failed with status code")) {
+						  message = "系统接口" + message.substr(message.length - 3) + "异常";
+						}
+						this.myUni.postMessage({
+							data: {
+								msg:message
+							},
+						})
+						return Promise.reject(message)
+					  }
+					)
+				},
+				async getDeviceInfo(deviceId) {
+					const {data} = await this.request({
+						method:'get',
+						url:'/iot/device/'+deviceId
+					});
+					this.serialNumber = data.serialNumber;
+					this.channelList=data.children.filter(item=>item.sipStatus==3).map(item=>({
+						text:item.channelName,
+						channelSipId:item.channelSipId
+					}));
+				},
+				select(data,index){
+					this.channelName=data.text
+					this.channelSipId=data.channelSipId
+					this.show=false
+					this.play()
+				},
+				async create(type) {
+					this.$jessibucaPro && await this.$jessibucaPro.destroy();
+					let config = {
+						container: this.$refs.container,
+						videoBuffer: 0.1, // 缓存时长
+						videoBufferDelay: 0.2, //
+						loadingText: '加载中',
+						decoder: "../js/jessibuca-pro/decoder-pro.js",
+						isResize: false,
+						isFlv: true,
+						debug: false,
+						useMSE: false,
+						useSIMD: true,
+						useWebFullScreen:true,
+						debugLevel: 'debug',
+						showBandwidth: false, // 显示网速
+						showPerformance: false, // 显示性能
+						showPlaybackOperate: true,
+						operateBtns: {
+							fullscreen: true,
+							screenshot: false,
+							play: true,
+							audio: false,
+							record: false,
+							ptz: false,
+							performance: false,
+						},
+						ptzClickType: 'mouseDownAndUp'
+					}
+					const jessibucaPro = new JessibucaPro(config);
+
+					this.$jessibucaPro = jessibucaPro;
+				},
+				/** 直播 */
+				async play() {
+					if (this.serialNumber && this.channelSipId) {
+						//通知设备推流
+						const {data} = await this.request({
+							method:'get',
+							url:`/sip/player/play/${this.serialNumber}/${this.channelSipId}`
+						});
+						data.playurl && this.$jessibucaPro.play(data.playurl);
+					}
+				},
+				/** 方向控制 */
+				ptzDirection(leftRight, upDown) {
+					var data = {
+						leftRight: leftRight,
+						upDown: upDown,
+						moveSpeed: 125,
+					};
+					if (this.serialNumber && this.channelSipId) {
+						this.request({
+							method:'post',
+							url:'/sip/ptz/direction/'+ this.serialNumber + "/" + this.channelSipId ,
+							data:data
+						})
+					}
+				},
+				handleDirection(d){
+					switch (d) {
+						case 'up':
+							this.ptzDirection(0, 1);
+							break;
+						case 'down':
+							this.ptzDirection(0, 2);
+							break;
+						case 'left':
+							this.ptzDirection(2, 0);
+							break;
+						case 'right':
+							this.ptzDirection(1, 0);
+							break;
+						case 'stop':
+							this.ptzDirection(0, 0);
+							break;
+					}
+				},
+				async changTabs(data,index){
+					if(index==1){
+						this.screenShot()
+					}
+				},
+				// 缩放发送
+				ptzScale(inOut){
+					let data = {
+						inOut:inOut,
+						scaleSpeed:30
+					}
+					if (this.serialNumber && this.channelSipId) {
+						this.request({
+							method:'post',
+							url:'/sip/ptz/scale/'+ this.serialNumber + "/" + this.channelSipId,
+							data:data
+						})
+					}
+				},
+				// 缩放停止
+				ptzStop(){
+					this.request({
+						method:'post',
+						url:'/sip/ptz/scale/'+ this.serialNumber + "/" + this.channelSipId,
+						data:{
+							inOut:0,
+							scaleSpeed:30
+						}
+					})
+				}
+			}
+		})
+	</script>
+</body>
+</html>

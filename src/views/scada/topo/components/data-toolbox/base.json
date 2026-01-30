@@ -1,0 +1,658 @@
+{
+    "title": "基本",
+    "icon": "base",
+    "opened": false,
+    "items": [
+        {
+            "text": "面板",
+            "icon": "base/panel.png",
+            "type": "static",
+            "info": {
+                "type": "panel",
+                "componentShow": ["组态界面"],
+                "action": [],
+                "dataBind": {
+                    "ztPageData": ""
+                },
+                "dataAction": {},
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 500,
+                        "h": 300
+                    },
+                    "backColor": "#fff",
+                    "foreColor": "#000",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)",
+                    "waterBorderWidth": 1,
+                    "waterBorderColor": "#b3b3b3",
+                    "borderRadius": 10
+                }
+            }
+        },
+        {
+            "text": "文字",
+            "icon": "base/word.png",
+            "type": "static",
+            "info": {
+                "type": "text",
+                "componentShow": ["单击", "组件颜色", "动画"],
+                "action": [],
+                "dataBind": {
+                    "djAction": false,
+                    "action": "",
+                    "productId": "",
+                    "serialNumber": "",
+                    "identifier": "",
+                    "modelName": "",
+                    "modelValue": "",
+                    "redirectUrl": ""
+                },
+                "dataAction": {
+                    "xyAction": false,
+                    "xzAction": false,
+                    "ssAction": false,
+                    "hdAction": false,
+                    "serialNumber": "",
+                    "identifier": "",
+                    "modelName": "",
+                    "paramJudge": "",
+                    "paramJudgeData": "",
+                    "rotationSpeed": "中",
+                    "translateList": []
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 100,
+                        "h": 30
+                    },
+                    "backColor": "#ff000000",
+                    "foreColor": "#000",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)",
+                    "waterBorderWidth": 1,
+                    "waterBorderColor": "rgba(255, 255, 255, 0)",
+                    "text": "Test",
+                    "textAlign": "center",
+                    "fontSize": 14,
+                    "fontFamily": "Arial"
+                }
+            }
+        },
+        {
+            "text": "数显框",
+            "icon": "base/number.png",
+            "type": "static",
+            "info": {
+                "type": "text",
+                "componentShow": ["参数绑定", "单击", "组件颜色", "动画"],
+                "action": [],
+                "dataBind": {
+                    "djAction": false,
+                    "action": "",
+                    "productId": "",
+                    "serialNumber": "",
+                    "identifier": "",
+                    "modelName": "",
+                    "modelValue": "",
+                    "unit": "",
+                    "redirectUrl": ""
+                },
+                "dataAction": {
+                    "xyAction": false,
+                    "xzAction": false,
+                    "ssAction": false,
+                    "hdAction": false,
+                    "serialNumber": "",
+                    "identifier": "",
+                    "modelName": "",
+                    "paramJudge": "",
+                    "paramJudgeData": "",
+                    "rotationSpeed": "中",
+                    "translateList": []
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 50,
+                        "h": 50
+                    },
+                    "backColor": "#fff",
+                    "foreColor": "#000",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)",
+                    "textAlign": "center",
+                    "fontSize": 14,
+                    "fontFamily": "Arial",
+                    "text": "0"
+                }
+            }
+        },
+        {
+            "text": "状态开关",
+            "icon": "base/switch.png",
+            "type": "static",
+            "info": {
+                "type": "imageSwitch",
+                "componentShow": ["状态开关", "参数绑定", "单击", "组件颜色", "设备状态", "滤镜渲染"],
+                "action": [],
+                "dataBind": {
+                    "djAction": false,
+                    "activeName": "变量状态",
+                    "productId": "",
+                    "serialNumber": "",
+                    "modelName": "",
+                    "identifier": "",
+                    "modelValue": "",
+                    "action": "",
+                    "redirectUrl": "",
+                    "controValue": "",
+                    "shutImageUrl": "",
+                    "openImageUrl": "",
+                    "warnImageUrl": "",
+                    "stateList": []
+                },
+                "dataAction": {
+                    "actualValue": ""
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 50,
+                        "h": 50
+                    },
+                    "zIndex": 1,
+                    "transform": 0,
+                    "backColor": "#fff",
+                    "transformType": "rotate(0deg)",
+                    "isFilter": false,
+                    "url": ""
+                }
+            }
+        },
+        {
+            "text": "水流",
+            "icon": "base/water.png",
+            "type": "static",
+            "isHide": true,
+            "info": {
+                "type": "flow-bar",
+                "componentShow": ["参数绑定", "组件颜色", "水流"],
+                "action": [],
+                "dataBind": {
+                    "serialNumber": "",
+                    "identifier": "",
+                    "modelValue": ""
+                },
+                "dataAction": {
+                    "direction": "",
+                    "paramJudge": "",
+                    "paramJudgeData": "",
+                    "direction01": "",
+                    "paramJudge01": "",
+                    "paramJudgeData01": ""
+                },
+                "style": {
+                    "position": {
+                        "x": 100,
+                        "y": 100,
+                        "w": 320,
+                        "h": 50
+                    },
+                    "backColor": "rgba(0, 206, 209, 1)",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)",
+                    "foreColor": "red",
+                    "lineHeight": 10,
+                    "direction": "水平",
+                    "animations": "正向",
+                    "speed": "中",
+                    "lineWidth": 15,
+                    "lineInterval": 20,
+                    "lineType": "矩形",
+                    "anchorPointNum": 2,
+                    "spotPoints": [
+                        {
+                            "x": 20,
+                            "y": 20
+                        },
+                        {
+                            "x": 300,
+                            "y": 20
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "text": "水流",
+            "icon": "base/water.png",
+            "type": "static",
+            "info": {
+                "type": "flow-bar-dynamic",
+                "componentShow": ["参数绑定", "组件颜色", "水流"],
+                "action": [],
+                "dataBind": {
+                    "serialNumber": "",
+                    "identifier": "",
+                    "modelValue": ""
+                },
+                "dataAction": {
+                    "direction": "",
+                    "paramJudge": "",
+                    "paramJudgeData": "",
+                    "direction01": "",
+                    "paramJudge01": "",
+                    "paramJudgeData01": ""
+                },
+                "style": {
+                    "position": {
+                        "x": 100,
+                        "y": 100,
+                        "w": 320,
+                        "h": 50
+                    },
+                    "backColor": "rgba(30, 144, 255, 1)",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)",
+                    "foreColor": "rgba(255, 215, 0, 1)",
+                    "lineHeight": 7,
+                    "direction": "水平",
+                    "animations": "正向",
+                    "speed": "中",
+                    "lineWidth": 15,
+                    "lineInterval": 20,
+                    "lineType": "矩形",
+                    "anchorPointNum": 6,
+                    "spotPoints": []
+                }
+            }
+        },
+        {
+            "text": "液位",
+            "icon": "base/yewei.png",
+            "type": "static",
+            "info": {
+                "type": "chart-water",
+                "componentShow": ["参数绑定"],
+                "action": [],
+                "dataBind": {
+                    "sn": "",
+                    "title": "",
+                    "biz": "",
+                    "serialNumber": "",
+                    "modelName": "",
+                    "identifier": "",
+                    "modelValue": 0
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 200,
+                        "h": 200
+                    },
+                    "backColor": "#ff000000",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)",
+                    "waterShape": "container",
+                    "waterColor": "#1cb5fc",
+                    "waterFontSize": 12,
+                    "waterBorderWidth": 1,
+                    "waterBorderColor": "#fff",
+                    "waterBackColor": "#ff000000"
+                }
+            }
+        },
+        {
+            "text": "萤石云视频",
+            "icon": "base/video.png",
+            "type": "static",
+            "info": {
+                "type": "video",
+                "componentShow": ["萤石云"],
+                "action": [],
+                "dataBind": {
+                    "channelNumber": 1,
+                    "serialNumber": "G39444019",
+                    "accessToken": "ra.4moptir73o22sreu20flhhth3vgwtqow-60tzx4e826-0hscef0-wndt1ekdd"
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 305,
+                        "h": 157
+                    },
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)"
+                }
+            }
+        },
+        {
+            "text": "监控直播",
+            "icon": "base/video.png",
+            "type": "static",
+            "info": {
+                "type": "video-mp4",
+                "componentShow": ["直播视频"],
+                "action": [],
+                "dataBind": {
+                    "deviceId":null,
+                    "deviceSipId":null,
+                    "channelSipId":null
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 305,
+                        "h": 157
+                    },
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)"
+                }
+            }
+        },
+        {
+            "text": "MP4",
+            "icon": "base/video.png",
+            "type": "static",
+            "info": {
+                "type": "video-play",
+                "componentShow": ["通用视频"],
+                "videoUrl": "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
+                "imageUrl": "",
+                "action": [],
+                "dataBind": {
+                    "sn": "",
+                    "title": "",
+                    "biz": ""
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 305,
+                        "h": 157
+                    },
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)"
+                }
+            }
+        },
+        {
+            "text": "时间",
+            "icon": "base/timer.png",
+            "type": "static",
+            "info": {
+                "type": "timer",
+                "componentShow": ["组件颜色"],
+                "action": [],
+                "dataBind": {
+                    "sn": "",
+                    "title": "",
+                    "biz": ""
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 300,
+                        "h": 70
+                    },
+                    "backColor": "rgba(255, 255, 255, 0)",
+                    "foreColor": "#00CED1",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)",
+                    "textAlign": "center",
+                    "fontSize": 30,
+                    "fontFamily": "Arial"
+                }
+            }
+        },
+        {
+            "text": "地图",
+            "icon": "base/map.png",
+            "type": "static",
+            "isHide": true,
+            "info": {
+                "type": "map",
+                "componentShow": [],
+                "action": [],
+                "dataBind": {},
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 1200,
+                        "h": 600
+                    },
+                    "zIndex": 1,
+                    "mapModel": "normal",
+                    "transform": 0,
+                    "transformType": "rotate(0deg)"
+                }
+            }
+        },
+        {
+            "text": "天气",
+            "icon": "base/weather.png",
+            "type": "static",
+            "info": {
+                "type": "weather",
+                "componentShow": ["天气", "组件颜色"],
+                "action": [],
+                "dataBind": {
+                    "provinceCode": "",
+                    "cityCode": "",
+                    "districtCode": ""
+                },
+                "weatherDetail": {
+                    "city": "",
+                    "tem": "",
+                    "wea": "",
+                    "wea_img": "",
+                    "win": "",
+                    "win_speed": "",
+                    "humidity": "",
+                    "pressure": "",
+                    "air_level": "",
+                    "alarm": {}
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 450,
+                        "h": 180
+                    },
+                    "backColor": "#fff",
+                    "foreColor": "#000",
+                    "fontFamily": "Arial",
+                    "waterBorderWidth": 1,
+                    "waterBorderColor": "rgba(255, 255, 255, 0)",
+                    "borderRadius": 10,
+                    "weatherModel": "完整模式",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)"
+                }
+            }
+        },
+        {
+            "text": "告警记录",
+            "icon": "base/warn.png",
+            "type": "static",
+            "isHide": true,
+            "info": {
+                "type": "warn",
+                "componentShow": ["轮播表"],
+                "action": [],
+                "dataBind": {},
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 568,
+                        "h": 300
+                    },
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)",
+                    "rowNum": 5,
+                    "header": ["告警时间", "告警名称", "设备名称", "告警级别", "处理状态"],
+                    "foreColor": "#fff",
+                    "headerBGC": "#00BAFF",
+                    "oddRowBGC": "#003B51",
+                    "evenRowBGC": "#0A2732",
+                    "waitTime": 2000,
+                    "headerHeight": 35,
+                    "columnWidth": "60,160,110,110,100,100",
+                    "align": ["center"],
+                    "index": true,
+                    "carousel": "single",
+                    "indexHeader": "序号"
+                }
+            }
+        },
+        {
+            "text": "维修记录",
+            "icon": "base/warn.png",
+            "type": "static",
+            "isHide": true,
+            "info": {
+                "type": "order",
+                "componentShow": ["轮播表"],
+                "action": [],
+                "dataBind": {},
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 568,
+                        "h": 300
+                    },
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)",
+                    "rowNum": 5,
+                    "header": ["告警时间", "告警名称", "设备名称", "告警级别", "处理内容"],
+                    "foreColor": "#fff",
+                    "headerBGC": "#00BAFF",
+                    "oddRowBGC": "#003B51",
+                    "evenRowBGC": "#0A2732",
+                    "waitTime": 2000,
+                    "headerHeight": 35,
+                    "columnWidth": "60,160,110,110,100,160",
+                    "align": ["center"],
+                    "index": true,
+                    "carousel": "single",
+                    "indexHeader": "序号"
+                }
+            }
+        },
+        {
+            "text": "历史报表",
+            "icon": "base/history.png",
+            "type": "static",
+            "isHide": true,
+            "info": {
+                "type": "history",
+                "componentShow": ["组件颜色"],
+                "action": [],
+                "dataBind": {},
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 568,
+                        "h": 300
+                    },
+                    "zIndex": 1,
+                    "backColor": "#fff",
+                    "foreColor": "#000",
+                    "transform": 0,
+                    "transformType": "rotate(0deg)"
+                }
+            }
+        },
+        {
+            "text": "三维场景",
+            "icon": "base/3d.png",
+            "type": "static",
+            "info": {
+                "type": "3D-model",
+                "componentShow": ["三维"],
+                "modelUrl": "",
+                "imageUrl": "",
+                "action": [],
+                "dataBind": {
+                    "sn": "",
+                    "title": "",
+                    "biz": ""
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 1920,
+                        "h": 1080
+                    },
+                    "backColor": "#00ffff",
+                    "zIndex": -9999,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)"
+                }
+            }
+        },
+        {
+            "text": "VR场景",
+            "icon": "base/3d.png",
+            "type": "static",
+            "isHide": true,
+            "info": {
+                "type": "VR",
+                "componentShow": ["VR"],
+                "modelUrl": "",
+                "imageUrl": "",
+                "action": [],
+                "dataBind": {
+                    "sn": "",
+                    "title": "",
+                    "biz": ""
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 1920,
+                        "h": 1080
+                    },
+                    "backColor": "rgba(255, 255, 255, 0)",
+                    "zIndex": -9999,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)",
+                    "url": "",
+                    "markers": []
+                }
+            }
+        }
+    ]
+}

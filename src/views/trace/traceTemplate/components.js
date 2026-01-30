@@ -1,0 +1,43 @@
+export default [{
+    groupName:'媒体组建',
+    children:[{
+        name:'轮播图',
+        icon:'el-icon-s-goods'
+    },{
+        name:'图片',
+        icon:'el-icon-s-goods'
+    },{
+        name:'视频',
+        icon:'el-icon-s-goods'
+    }]
+},{
+    groupName:'溯源组建',
+    children:[{
+        name:'产品信息',
+        icon:'el-icon-s-goods'
+    },{
+        name:'检验次数',
+        icon:'el-icon-s-goods'
+    },{
+        name:'质检信息',
+        icon:'el-icon-s-goods'
+    },{
+        name:'产地地图',
+        icon:'el-icon-s-goods'
+    },{
+        name:'生长环境',
+        icon:'el-icon-s-goods'
+    },{
+        name:'种植环节',
+        icon:'el-icon-s-goods'
+    },{
+        name:'业务人员',
+        icon:'el-icon-s-goods'
+    },{
+        name:'店铺信息',
+        icon:'el-icon-s-goods'
+    },{
+        name:'品牌信息',
+        icon:'el-icon-s-goods'
+    }]
+}]

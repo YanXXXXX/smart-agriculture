@@ -1,0 +1,294 @@
+{
+    "title": "图表",
+    "icon": "insert_chart",
+    "opened": false,
+    "items": [
+        {
+            "text": "曲线图",
+            "icon": "curve-chart",
+            "type": "svg",
+            "info": {
+                "type": "chart-line",
+                "componentShow": ["组件颜色"],
+                "action": [],
+                "dataBind": {
+                    "lData": [],
+                    "xData": ["11:30", "12:00", "12:30", "13:00", "13:30"],
+                    "yData": [
+                        {
+                            "name": "温度",
+                            "data": [20, 30, 42, 35, 65, 15]
+                        },
+                        {
+                            "name": "湿度",
+                            "data": [80, 90, 95, 92, 96, 93]
+                        },
+                        {
+                            "name": "压强",
+                            "data": [100, 102, 130, 150, 160, 96]
+                        }
+                    ]
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 500,
+                        "h": 250
+                    },
+                    "backColor": "rgba(255, 255, 255, 1)",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)",
+                    "foreColor": "#000"
+                }
+            }
+        },
+        {
+            "text": "折线图",
+            "icon": "line-chart",
+            "type": "svg",
+            "info": {
+                "type": "chart-line-step",
+                "componentShow": ["组件颜色"],
+                "action": [],
+                "dataBind": {
+                    "sn": "",
+                    "title": "",
+                    "biz": "",
+                    "lData": [],
+                    "xData": ["11:30", "12:00", "12:30", "13:00", "13:30"],
+                    "yData": [
+                        {
+                            "name": "温度",
+                            "data": [20, 30, 42, 35, 65, 15]
+                        },
+                        {
+                            "name": "湿度",
+                            "data": [80, 90, 95, 92, 96, 93]
+                        },
+                        {
+                            "name": "压强",
+                            "data": [100, 102, 130, 150, 160, 96]
+                        }
+                    ]
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 500,
+                        "h": 250
+                    },
+                    "backColor": "rgba(255, 255, 255, 1)",
+                    "foreColor": "#000",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)"
+                }
+            }
+        },
+        {
+            "text": "柱状图",
+            "icon": "column-chart",
+            "type": "svg",
+            "info": {
+                "type": "chart-bar",
+                "componentShow": ["组件颜色"],
+                "action": [],
+                "dataBind": {
+                    "sn": "",
+                    "title": "",
+                    "biz": "",
+                    "lData": [],
+                    "xData": ["11:30", "12:00", "12:30", "13:00", "13:30"],
+                    "yData": [
+                        {
+                            "name": "温度",
+                            "data": [20, 30, 42, 35, 65, 15]
+                        },
+                        {
+                            "name": "湿度",
+                            "data": [80, 90, 95, 92, 96, 93]
+                        },
+                        {
+                            "name": "压强",
+                            "data": [100, 102, 130, 150, 160, 96]
+                        }
+                    ]
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 500,
+                        "h": 250
+                    },
+                    "backColor": "rgba(255, 255, 255, 1)",
+                    "foreColor": "#000",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)"
+                }
+            }
+        },
+        {
+            "text": "饼形图",
+            "icon": "pie-chart",
+            "type": "svg",
+            "info": {
+                "type": "chart-pie",
+                "componentShow": ["设备统计", "组件颜色"],
+                "action": [],
+                "dataBind": {},
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 300,
+                        "h": 250
+                    },
+                    "backColor": "rgba(255, 255, 255, 1)",
+                    "foreColor": "#000",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)",
+                    "pieType": "设备状态"
+                }
+            }
+        },
+        {
+            "text": "仪表图",
+            "icon": "gauge-chart",
+            "type": "svg",
+            "info": {
+                "type": "chart-gauge",
+                "componentShow": ["参数绑定", "组件颜色"],
+                "action": [],
+                "dataBind": {
+                    "sn": "",
+                    "title": "",
+                    "biz": "",
+                    "identifier": "",
+                    "modelName": "",
+                    "modelValue": "",
+                    "unit": "",
+                    "paramMin": 0,
+                    "paramMax": 100
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 300,
+                        "h": 300
+                    },
+                    "backColor": "rgba(0, 0, 0, 1)",
+                    "foreColor": "#fff",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "fontSize": 14,
+                    "transformType": "rotate(0deg)"
+                }
+            }
+        },
+        {
+            "text": "温度计",
+            "icon": "thermometer",
+            "type": "svg",
+            "info": {
+                "type": "chart-temp",
+                "componentShow": ["参数绑定", "组件颜色", "组件填充"],
+                "action": [],
+                "dataBind": {
+                    "sn": "",
+                    "title": "",
+                    "biz": "",
+                    "identifier": "",
+                    "modelName": "",
+                    "modelValue": "",
+                    "unit": "",
+                    "stateList": [],
+                    "paramMin": 0,
+                    "paramMax": 100,
+                    "interval": 10
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 300,
+                        "h": 300
+                    },
+                    "backColor": "rgba(255, 255, 255, 1)",
+                    "foreColor": "#000",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)"
+                }
+            }
+        },
+        {
+            "text": "地图",
+            "icon": "map",
+            "isHide": true,
+            "type": "svg",
+            "info": {
+                "type": "chart-map",
+                "componentShow": ["自定义echarts", "地图文件"],
+                "action": [],
+                "dataBind": {
+                    "echartOption": "",
+                    "echartRun": 0,
+                    "echartSecond": 60,
+                    "echartData": "",
+                    "mapAddress": "北京",
+                    "mapUrl": "https://www.isqqw.com/asset/get/areas_v3/country/china.json"
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 300,
+                        "h": 300
+                    },
+                    "backColor": "rgba(255, 255, 255, 1)",
+                    "foreColor": "#000",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)"
+                }
+            }
+        },
+        {
+            "text": "自定义",
+            "icon": "custom",
+            "type": "svg",
+            "isHide": true,
+            "info": {
+                "type": "chart-wrapper",
+                "componentShow": ["自定义echarts"],
+                "action": [],
+                "dataBind": {
+                    "echartOption": "",
+                    "echartRun": 0,
+                    "echartSecond": 60,
+                    "echartData": ""
+                },
+                "style": {
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 300,
+                        "h": 300
+                    },
+                    "backColor": "rgba(255, 255, 255, 1)",
+                    "foreColor": "#000",
+                    "zIndex": 1,
+                    "transform": 0,
+                    "transformType": "rotate(0deg)"
+                }
+            }
+        }
+    ]
+}
